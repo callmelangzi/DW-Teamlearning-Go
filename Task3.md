@@ -292,3 +292,27 @@ func main() {
 }
 
 ```
+
+
+
+--------------------------------
+使用Go语言解决leetcode两数相加问题
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+nums = [2, 7, 11, 15], target = 9, nums[0] + nums[1] = 2 + 7 = 9,返回 [0, 1]
+
+```go
+// 暴力枚举
+func twoSum(nums []int, target int) []int {
+    n := len(nums)
+
+    for i :=0; i <n;i++{
+        for j:= i+1 ; j<n ;j++{
+            if (nums[i] + nums[j] == target) {
+                return [] int{i,j} 
+            }
+        }
+    }
+    return [] int{0,0}
+}
+
+```
